@@ -56,4 +56,4 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/flask-app:latest
 
       - name: Output image digest
-        run: echo "Image digest: ${{ steps.docker_build.outputs.digest }}"
+        run: echo ${{ steps.build-and-publish.outputs.digest }}
